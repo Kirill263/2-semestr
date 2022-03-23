@@ -1,16 +1,17 @@
-#include<iostream>
-#include<stdlib.h>
-#include<time.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 int main()
 {
+	int matrix[4][4], i ,j;
+	
 	srand(time(NULL));
 	int mas[2]={-1,1};
 	std::cout<<mas[(rand()%2)]<<'\n';
  
-    int a[4][4], i ,j;
  
  for(i = 0; i < 4; ++i)
   {for( j = 0;  j < 4; ++j)
@@ -18,8 +19,8 @@ int main()
   }
  for(i = 0; i < 4; ++i)
   {for(j = 0; j < 4; ++j)
-     cout<<a[i][j]<<'\t';
-     cout<<'\n';
+     cout<<matrix[i][j]<<'\t';
+     cout<<endl;
  }
  return 0;
 }
