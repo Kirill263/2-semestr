@@ -19,7 +19,7 @@ int main()
   {
     for (int j=0; j<col; j++)
     {
-      matrix[i][j]=rand()%1+1;
+      matrix[i][j]=rand()%1-1;
      
     }
   }
