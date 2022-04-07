@@ -55,7 +55,8 @@ int main()
 	   {
         for(int j = 0; j < row; j++)
 		 {
-            for(int k = 0; k < row; k++)
+            matrix3[i][j] = 0;
+             int k = 0; k < row; k++)
 			 {
                 matrix3[i][j] += (matrix1[i][k] * matrix2[k][j]);
              }
