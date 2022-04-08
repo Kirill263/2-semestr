@@ -24,11 +24,12 @@ int main()
 		{"Maria", "Krupennikova", 1995, "Psychologist", 50000}
     };
     
-    cout<<workers[0].first_name<<endl;
-    cout<<workers[0].second_name<<endl;
-    cout<<workers[0].date_of_birth<<endl;
-    cout<<workers[0].job<<endl;
-    cout<<workers[0].salary<<endl;
+    int sum = 0;
+    for (int i = 0; i<10; i++)
+    {
+    	sum += workers[i].salary;
+    }
+    cout<<"Salary = "<< sum/10 <<endl;
     
     return 0;
 }
