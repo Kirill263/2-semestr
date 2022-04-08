@@ -31,5 +31,17 @@ int main()
     }
     cout<<"Salary = "<< sum/10 <<endl;
     
+    
+    int years;
+	for (int i = 0; i<10; i++)
+    {
+        years = 2022 - workers[i].date_of_birth;
+        if (years>30)
+	    {
+		    cout<<workers[i].first_name<<" "<<
+			workers[i].second_name<<" "<<years<<endl;
+     	}
+    }
+    
     return 0;
 }
