@@ -43,5 +43,7 @@ int main()
      	}
     }
     
+    cout<<sizeof(workers)<<endl;
+    
     return 0;
 }
