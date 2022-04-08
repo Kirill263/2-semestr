@@ -8,7 +8,7 @@ int main()
 {
   srand(time(NULL));
   //Инициализируем переменные
-  const int row = 3;
+  const int row = 4;
   const int col = row;
 
   int sum = 0;
@@ -20,7 +20,7 @@ int main()
   {
     for (int j=0; j<col; j++)
     {
-      matrix[i][j]=rand()%5;
+      matrix[i][j]=rand()%1+1;
     }
   }
   
