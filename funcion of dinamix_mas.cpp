@@ -3,17 +3,23 @@
 #include <ctime>
 using namespace std;
 
-void f(int *arr, int N)
+void f(int arr, int N)
 {
-	arr = new int[N];
-	int mas;
-	int max = arr[0];
+	arr = 0;
+	N=100;
+}
+
+int main()
+{
+	int *arr = new int[100]; //Объявляем массив с указателем и выделяем память, достаточную для того, чтобы вместить тип int
+	int N;
+	int min = arr[0];
 	srand (time(NULL));
 	//Заполняем массив случайными числами
 	for (int i=0; i<100; i++)
 	{
-		mas = rand()%100;
-	    arr[i] = mas;
+		N = rand()%100;
+	    arr[i] = N;
 	}
 	//Выводим массив
 	for (int i=0; i<100; i++)
@@ -25,20 +31,17 @@ void f(int *arr, int N)
 	//Проходим по циклу и выводим max число из этого массива
 	for (int i=0; i<100; i++)
 	{
-		if (i==0 || arr[i] > max) //Знак || обозначает ИЛИ
+		if (i==0 || arr[i] < min)
 		{
-			max = arr[i];
+			min = arr[i];
 		}
 	}
-	cout<<"max = "<<max<<endl;
+	cout<<"min = "<<min<<endl;
 	
-	cout<<"max address = "<< &max<<endl; //Вывод адресса max числа
+	cout<<"min address = "<< &min<<endl; //Вывод адресса max числа
 	
-	cout<<sizeof(N)<<endl; //Вывод размера N элементов в байтах
+	cout<<(sizeof(arr)*N)<<endl; //Вывод размера N элементов в байтах
 	delete []arr; //Освобождаем выделенную память
+	return 0;
 }
 
-int main()
-{
-	f(0,100); 	
-}

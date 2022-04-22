@@ -1,7 +1,8 @@
 #include <iostream>
+#include <string>
 struct people
 {
-	char first_name[20];
+	std::string first_name;
 	char second_name[20];
 	int date_of_birth;
 	char job[20];
